@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#define ll unsigned int
+#define ll long long int
 
 ll modulo(ll base, ll exponent, ll mod) 
 {
@@ -98,18 +98,18 @@ void main()
 		b2=b2%kn;
 
 	d=b2;
-	printf("%d and %d is prime\n",i,j);
-	printf("p*q is % d\n",n);
-	printf("(p-1)*(q-1) is %d\n",kn);
-	printf("selected e is %d\n",e);
-	printf("calculated d is %d\n",d);
-	printf("%d\n",(e*d)%kn);
+	printf("%lld and %lld is prime\n",i,j);
+	printf("p*q is %lld\n",n);
+	printf("(p-1)*(q-1) is %lld\n",kn);
+	printf("selected e is %lld\n",e);
+	printf("calculated d is %lld\n",d);
+	printf("%lld\n",(e*d)%kn);
 
 	ll c;
-	scanf("%d",&c);
+	scanf("%lld",&c);
 	c=modulo(c,e,n);
-	printf("encrypted message : %d\n", c);
+	printf("encrypted message : %lld\n", c);
 	p=modulo(c,d,n);
-	printf("decrypted message : %d\n",p);
+	printf("decrypted message : %lld\n",p);
 }
 
