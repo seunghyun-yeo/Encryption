@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#define ll long long int
+#define ll unsigned long long int
 
 ll modulo(ll base, ll exponent, ll mod) 
 {
@@ -41,9 +41,9 @@ void main()
 	ll i,j,e,d,n,kn;
 	srand((unsigned int)time(0));
 	do{
-		p=rand()%10000;
-	}while(p/1000==0);
-	for(i=p;i<10000;i++)
+		p=rand()%100000;
+	}while(p/10000==0);
+	for(i=p;i<100000;i++)
 	{
 		if(Fermat(i,50)==1)
 		{
@@ -65,10 +65,10 @@ void main()
 	n=i*j;
 	kn=(i-1)*(j-1);
 	do{
-		p=rand()%10000;
-	}while((p/1000)==0);
+		p=rand()%1000000;
+	}while((p/100000)==0);
 
-	for(e=p;e<10000;e++)
+	for(e=p;e<1000000;e++)
 	{
 		if(Fermat(e,50)==1)
 		{
